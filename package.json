@@ -5,9 +5,10 @@
   "license": "MIT",
   "scripts": {
     "start": "node ./dist/index.js",
-    "prisma": "npx prisma db push",
+    "prisma:deploy": "npx prisma migrate deploy --preview-feature",
     "dev": "nodemon ./src/index.ts",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "deploy": "npm run build && npm run prisma:deploy"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
