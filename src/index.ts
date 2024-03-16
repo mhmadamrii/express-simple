@@ -2,6 +2,7 @@ import {PrismaClient} from "@prisma/client";
 const prisma = new PrismaClient();
 import express, {Request, Response} from "express";
 const app = express();
+const port: any = process.env.PORT || 3000;
 app.use(express.json());
 
 // 🏚️ Default Route
@@ -74,6 +75,6 @@ app.delete("/users/:id", async (req: Request, res: Response) => {
   res.json({message: "success"});
 });
 
-app.listen(3000, "0.0.0.0", () => {
-  console.log("Express server is running on port 3000");
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Express server is running on port ${port}`);
 });
