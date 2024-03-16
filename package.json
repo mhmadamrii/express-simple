@@ -4,11 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ./dist/index.js",
-    "prisma:deploy": "npx prisma db push",
-    "dev": "nodemon ./src/index.ts",
-    "build": "tsc -p .",
-    "deploy": "npm run build && npm run prisma:deploy"
+    "watch": "tsc -w",
+    "dev": "nodemon/dist/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",

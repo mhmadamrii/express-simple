@@ -17,7 +17,9 @@
 ```
 git clone https://github.com/mcnaveen/node-express-prisma-boilerplate nepb
 ```
+
 - Cd into the project directory
+
 ```
 cd nepb
 ```
@@ -129,9 +131,17 @@ DELETE http://localhost:4000/users/1
 ```
 
 ## ☑️ LICENSE
+
 - MIT
 
 ---
+
 ### 💰 HELP ME WITH DEVELOPMENT COST
 
 <a href="https://www.buymeacoffee.com/mcnaveen" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+
+"start": "node ./dist/index.js",
+"prisma:deploy": "npx prisma db push",
+"dev": "nodemon ./src/index.ts",
+"build": "tsc -p .",
+"deploy": "npm run build && npm run prisma:deploy"
